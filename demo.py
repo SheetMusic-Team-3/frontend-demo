@@ -111,6 +111,7 @@ def predict():
 
 		for w in str_predictions[0]:
 			array_of_notes.append(int2word[w])
+		print(array_of_notes)
 		notes=[]
 		for i in array_of_notes:
 			if i[0:5]=="note-":
