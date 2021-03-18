@@ -112,6 +112,7 @@ def predict():
 		for w in str_predictions[0]:
 			array_of_notes.append(int2word[w])
 		print(array_of_notes)
+		test_output = array_of_notes[0]
 		notes=[]
 		for i in array_of_notes:
 			if i[0:5]=="note-":
@@ -137,7 +138,7 @@ def predict():
 			draw.text((j, height-40), i, (0,0,0), font=font)
 			j+= (width / (len(notes) + 4))
 		layer.save("annotated.png")
-		return render_template('demo-result.html')
+		return render_template('demo-result.html', x = test_output)
 
 if __name__=="__main__":
 	app.run()
